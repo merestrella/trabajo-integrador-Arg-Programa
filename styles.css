@@ -1,7 +1,15 @@
-.img-producto {
-    width: 200px;
+ul {
+  list-style: none;
 }
 
-ul{
- list-style: none;
+h3 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+li {
+  border: solid 1px;
 }
