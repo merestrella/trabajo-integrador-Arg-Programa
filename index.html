@@ -14,17 +14,85 @@
     <title>Casa de Antigüedades</title>
   </head>
 
-  <body>
+  <body class="container">
+     <!--Bootstrap-->
+     <script
+     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+     crossorigin="anonymous"
+   ></script>
+   <script
+     src="https://code.jquery.com/jquery-3.6.0.min.js"
+     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+     crossorigin="anonymous"
+   ></script>
+   <script src="/script.js"></script>
     <header>
-      <!--Acá va logo---->
-      <h1>Casa de antigüedades Legrand</h1>
-    </header>
-    <!--Acá va Menú-->
-    <nav></nav>
+      
+      <div class="container-fluid">
+        <div class="row">
+                    <div  class="col-md-3">4-293-9645/ 4-214-6610</div>
+                    <div class="col-md-3">A.Rivadavia 293, CABA</div>
+                    <div class="col-md-3">Whatssap: 1554240995</div>
+                    <div class="col-md-3">Antiguedadeslegrand@hotmail.com</div>
+                
+        </div>
+         
+      <div class="row">
+          
+                <div class="col"> 
+                <input type="text" placeholder= "Busqueda de catálogo">
+                </div>
+            </div>
+        </div>
+      </div>
+     
+      <nav class="bg-success">
+        <ul class="d-flex gap-5 justify-content-center bd-highlight">
+          <a href=""><li class="text-white">
+            Quienes somos
+          </li></a>
+          <a href=""><li class="text-white">
+            Cotización
+          </li></a>
+          <a href=""><li class="text-white">
+            Contacto
+          </li></a>
+        </ul>
+      </nav>
+  
+      <section>
+        <img src="a295fb4e608309776af77de64f14077f.jpg" alt="">
+        <img src="extravantique-2019-maquina-de-escribir.jpg" alt="">
+        <img src="images.jpg" alt="">
+        <img src="lámparas-de-antigüedades-una-antigua-araña-árabe-tradicional-199497648.jpg" alt="">
+      </section>
 
+    
+ </header>
     <section class="container">
+      <!--Carousel-->
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="https://www.discoverwalks.com/blog/wp-content/uploads/2019/07/antique-shop-big.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://images.estilosdeco.com/2020/12/antiguedades-roldan-1.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://www.discoverwalks.com/blog/wp-content/uploads/2019/07/antique-shop-big.jpg" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide-to="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>        
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+      </div>
       <!--Productos-->
-      <h2>Productos</h2>
+      <h2>Catálogo de productos</h2>
       <div>
         <ul class="row">
           <li class="col-md-4 col-sm-6">
@@ -89,20 +157,13 @@
     </section>
     <!--Mapa y ubicación-->
     <section>
-      <div></div>
+      <div>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8437.586576402737!2d-58.40884294442393!3d-34.58889223201735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca99c609fc2f%3A0x392ca99351808a75!2sRecoleta%2C%20CABA!5e0!3m2!1ses!2sar!4v1682034473051!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      </div>
     </section>
 
     <footer></footer>
-    <!--Bootstrap-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
