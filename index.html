@@ -12,54 +12,54 @@
 </head>
 
 <body class="container">
+
   <!--Bootstrap-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
+  <!--JQuery-->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!--JS-->
   <script src="/script.js"></script>
-  <header>
 
+  <header>
     <div class="container-fluid">
-      <div class="row">
+      <div class="row m-3 bg-green">
         <div class="col-md-3">4-293-9645/ 4-214-6610</div>
         <div class="col-md-3">A.Rivadavia 293, CABA</div>
         <div class="col-md-3">Whatssap: 1554240995</div>
         <div class="col-md-3">Antiguedadeslegrand@hotmail.com</div>
-
       </div>
 
-      <div class="row">
-
-        <div class="col">
-          <input type="text" placeholder="Busqueda de catálogo">
+      <div class="logo-container row m-4">
+        <div class="col-md-6">
+          <img src="/Logo.jpeg" width="200px" alt="Logo">
+        </div>
+        <div class="col-md-6">
+          <input type=" text" placeholder="Busqueda de catálogo">
         </div>
       </div>
-    </div>
     </div>
 
     <nav class="bg-success">
       <ul class="d-flex gap-5 justify-content-center bd-highlight">
-        <a href="">
-          <li class="text-white">
-            Quienes somos
-          </li>
-        </a>
-        <a href="">
-          <li class="text-white">
-            Cotización
-          </li>
-        </a>
-        <a href="">
-          <li class="text-white">
-            Contacto
-          </li>
-        </a>
+        <li class="text-white">
+          <a href="">Quienes somos</a>
+        </li>
+        <li class="text-white">
+          <a href="">Cotización</a>
+        </li>
+        <li class="text-white">
+          <a href="#contacto">Contacto</a>
+        </li>
+        <li class="text-white">
+          <a href="#productos">Productos</a>
+        </li>
       </ul>
     </nav>
-
   </header>
+
   <section class="container">
     <!--Carousel-->
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -90,7 +90,7 @@
     </div>
     <!--Productos-->
 
-    <section>
+    <section id="productos">
       <h2 class="m-4">Productos destacados</h2>
       <div class="container py-3">
         <div class="row">
@@ -238,15 +238,40 @@
     </section>
 
     <!--Mapa y ubicación-->
-    <section>
-      <div>
+    <section id="contacto" class="container py-4">
+      <div class="row">
+        <form id="myForm" class="col-md-6">
 
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8437.586576402737!2d-58.40884294442393!3d-34.58889223201735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca99c609fc2f%3A0x392ca99351808a75!2sRecoleta%2C%20CABA!5e0!3m2!1ses!2sar!4v1682034473051!5m2!1ses!2sar"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <h2>Contacto</h2>
 
-      </div>
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name">
+
+          <label for="name">Apellido:</label>
+          <input type="text" id="apellido" name="apellido">
+
+          <label for="phone">Teléfono:</label>
+          <input type="tel" minlength="10" id="phone" name="phone">
+
+
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email">
+
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message"></textarea>
+
+          <input type="submit" value="submit" value="Enviar">
+        </form>
+
+        <div class="col-md-6">
+          <h2>Visitenos</h2>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8437.586576402737!2d-58.40884294442393!3d-34.58889223201735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca99c609fc2f%3A0x392ca99351808a75!2sRecoleta%2C%20CABA!5e0!3m2!1ses!2sar!4v1682034473051!5m2!1ses!2sar"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
     </section>
 
     <footer>
