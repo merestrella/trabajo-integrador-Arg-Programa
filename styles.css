@@ -21,8 +21,12 @@ body {
 }
 
 /*Header*/
-logo-container {
+.container-logo {
   background-color: #054a1e;
+}
+
+#anuncios-home {
+  display: flex;
 }
 
 /*Tarjetas de productos */
@@ -106,20 +110,14 @@ input:invalid {
 }
 
 /*Footer*/
+.footer-content {
+  background-color: #054a1e;
+}
 .footer-nav ul {
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
-}
-
-.footer-nav li {
-  margin: 0 20px;
-  position: relative;
-}
-
-.footer-nav li:hover > ul {
-  display: block;
 }
 
 .footer-nav a {
@@ -129,18 +127,14 @@ input:invalid {
   font-size: 14px;
 }
 
-.footer-nav ul .sub-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  padding: 10px;
-}
-
 .footer-nav ul.sub-menu li {
   margin: 0;
 }
 
 .footer-nav ul.sub-menu a {
   font-weight: normal;
+}
+
+.footer-social {
+  text-align: center;
 }
