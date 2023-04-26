@@ -1,55 +1,35 @@
-const form = document.getElementById("myForm");
-const nameInput = document.getElementById("name");
-const apellidoInput = document.getElementById("apellido");
-const emailInput = document.getElementById("email");
-const phoneInput = document.getElementById("phone");
-const messageInput = document.getElementById("message");
+const form = document.getElementById("form");
+const name = document.getElementById("nombre");
+const apellido = document.getElementById("apellido");
+const phone = document.getElementById("phone");
+const email = document.getElementById("email");
+const message = document.getElementById("message");
 
-// form.addEventListener("submit", function (event) {
-//   event.preventDefault();
-
-//   if (nameInput.value === "") {
-//     alert("Por favor, ingresa tu nombre");
-//     nameInput.focus();
-//     return false;
-//   }
-
-//   if (apellidoInput.value === "") {
-//     alert("Por favor, ingresa tu apellido");
-//     apellidoInput.focus();
-//     return false;
-//   }
-
-//   if (emailInput.value === "") {
-//     alert("Por favor, ingresa tu correo electrónico");
-//     emailInput.focus();
-//     return false;
-//   }
-
-//   if (phoneInput.value === "") {
-//     alert("Por favor, ingresa tu número de teléfono");
-//     phoneInput.focus();
-//     return false;
-//   }
-
-//   const phoneRegex = /^\d{10}$/;
-//   if (!phoneRegex.test(phoneInput.value)) {
-//     alert("Por favor, ingresa un número de teléfono válido (10 dígitos)");
-//     phoneInput.focus();
-//     return false;
-//   }
-
-//   if (messageInput.value === "") {
-//     alert("Por favor, ingresa un mensaje");
-//     messageInput.focus();
-//     console.log(messageInput, "soy un mensaje");
-//     return false;
-//   }
-
-//   // Si todo está bien, se envía el formulario
-//   alert("Formulario enviado con éxito");
-//   form.reset();
-// });
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (nombre.value.trim() === "") {
+    alert("Por favor ingrese su nombre");
+    nombre.focus();
+  } else if (apellido.value.trim() === "") {
+    alert("Por favor ingrese su apellido");
+    apellido.focus();
+  } else if (phone.value.trim() === "") {
+    alert("Por favor ingrese su número de teléfono");
+    phone.focus();
+  } else if (phone.value.trim().length < 10) {
+    alert("Por favor ingrese un número de teléfono válido");
+    phone.focus();
+  } else if (email.value.trim() === "") {
+    alert("Por favor ingrese su correo electrónico");
+    email.focus();
+  } else if (message.value.trim() === "") {
+    alert("Por favor ingrese su mensaje");
+    message.focus();
+  } else {
+    alert("¡Su mensaje ha sido enviado exitosamente!");
+    form.reset();
+  }
+});
 
 function CargarAnuncios() {
   $.ajax(
@@ -58,16 +38,16 @@ function CargarAnuncios() {
 }
 
 function MostrarAnuncios(anuncio) {
-  const divAnuncios = document.getElementById("anuncios-home");
-  console.log(anuncio);
-  for (let i = 0; i < anuncio.results.length; i++) {
+  let divAnuncios = document.getElementById("anuncios-home");
+
+  for (let i = 0; i < 3; i++) {
     let anuncios = anuncio.results[i];
     divAnuncios.innerHTML += `
-    <div>
+    <div class="container-anuncio">
     <img class="img-anuncio" src="${anuncios.image_url}" />
     <h2 class="titulo-anuncio">${anuncios.title}</h2>
     </div>
-    
+
     <style>
     .titulo-anuncio {
       font-size:15px;

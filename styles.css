@@ -105,10 +105,6 @@ input[type="submit"]:hover {
   margin-right: 20px;
 }
 
-input:invalid {
-  background-color: red;
-}
-
 /*Footer*/
 .footer-content {
   background-color: #054a1e;
@@ -137,4 +133,10 @@ input:invalid {
 
 .footer-social {
   text-align: center;
+}
+
+@media (max-width: 900px) {
+  #anuncios-home {
+    display: block;
+  }
 }

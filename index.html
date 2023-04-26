@@ -16,8 +16,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
-  <!--JS-->
-  <script src="/script.js"></script>
 </head>
 
 <body class="container">
@@ -56,16 +54,6 @@
     </nav>
   </header>
 
-  <!--Anuncios con API-->
-  <div class="bg-info">
-    <p class="anuncio small bg-secondary text-white">ANUNCIO</p>
-    <img height="56" width="270" class="logo-anuncio m-0 d-block"
-      src="https://www.pagina12.com.ar/assets/media/logos/amp/logo_pagina_12_n.svg?v=2.0.126" />
-  </div>
-  <aside id="anuncios-home" class="container bg-info">
-
-  </aside>
-
   <!--Carousel-->
   <section class="container">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -99,10 +87,15 @@
         <img
           src="https://media.istockphoto.com/id/524153979/es/foto/mujer-con-la-colecci%C3%B3n-de-antig%C3%BCedades.jpg?s=612x612&w=0&k=20&c=ZOTpPc070ccS5nXff4R99aBxFaR16yoSN3iojHB_-Sk="
           alt="" class="img-somos col-md-6 py-3" width="100%">
-        <p class="col-md-6 h5 text-center py-4"><em>Bienvenido a nuestra casa de antigüedades, donde el pasado cobra vida y los objetos antiguos cuentan historias únicas. 
-            Ofrecemos una amplia selección de piezas de distintas épocas y estilos, desde mobiliario y decoración hasta arte y objetos curiosos. 
-            Cada objeto en nuestra colección ha sido cuidadosamente seleccionado por nuestro equipo de expertos, y estamos orgullosos de ofrecer piezas auténticas y de alta calidad. 
-            Nuestro objetivo es brindar una experiencia de compra única y personalizada, en la que nuestros clientes puedan explorar el pasado y descubrir tesoros únicos que les permitan agregar un toque de historia y personalidad a sus hogares. 
+        <p class="col-md-6 h5 text-center py-4"><em>Bienvenido a nuestra casa de antigüedades, donde el pasado cobra
+            vida y los objetos antiguos cuentan historias únicas.
+            Ofrecemos una amplia selección de piezas de distintas épocas y estilos, desde mobiliario y decoración hasta
+            arte y objetos curiosos.
+            Cada objeto en nuestra colección ha sido cuidadosamente seleccionado por nuestro equipo de expertos, y
+            estamos orgullosos de ofrecer piezas auténticas y de alta calidad.
+            Nuestro objetivo es brindar una experiencia de compra única y personalizada, en la que nuestros clientes
+            puedan explorar el pasado y descubrir tesoros únicos que les permitan agregar un toque de historia y
+            personalidad a sus hogares.
             Visítenos y déjese cautivar por la belleza y el encanto de las antigüedades.</em></p>
       </div>
     </section>
@@ -254,29 +247,32 @@
       </div>
     </section>
 
+    <!--Anuncios con API-->
+    <div class="bg-info">
+      <p class="anuncio small bg-secondary text-white">ANUNCIO</p>
+      <img height="56" width="270" class="logo-anuncio m-0 d-block"
+        src="https://www.pagina12.com.ar/assets/media/logos/amp/logo_pagina_12_n.svg?v=2.0.126" />
+    </div>
+    <aside id="anuncios-home" class="container bg-info">
+
+    </aside>
+
     <!--Mapa y ubicación-->
     <section id="contacto" class="container py-4">
       <div class="row">
-        <form id="myForm" class="col-md-6">
+        <form id="form" class="col-md-6">
 
           <h2>Contacto</h2>
-
-          <label for="name">Nombre:</label>
-          <input type="text" id="name" name="name">
-
-          <label for="name">Apellido:</label>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre">
+          <label for="apellido">Apellido:</label>
           <input type="text" id="apellido" name="apellido">
-
           <label for="phone">Teléfono:</label>
-          <input type="tel" minlength="10" id="phone" name="phone">
-
-
+          <input type="tel" id="phone" name="phone">
           <label for="email">Correo electrónico:</label>
           <input type="email" id="email" name="email">
-
           <label for="message">Mensaje:</label>
           <textarea id="message" name="message"></textarea>
-
           <input type="submit" value="submit" value="Enviar">
         </form>
 
@@ -315,7 +311,7 @@
               Antiguedadeslegrand@hotmail.com</p>
           </div>
     </footer>
-
+    <script src="/script.js"></script>
 </body>
 
 </html>
