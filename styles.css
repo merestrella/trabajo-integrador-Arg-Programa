@@ -13,7 +13,7 @@ h2 {
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 body {
@@ -22,7 +22,7 @@ body {
 
 /*Header*/
 .container-logo {
-  background-color: #054a1e;
+  background-color: #e5a474;
 }
 
 #anuncios-home {
@@ -58,7 +58,7 @@ body {
 
 /*Contacto*/
 form {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   font-family: Arial, sans-serif;
   background-color: #f1f1f1;
@@ -83,7 +83,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #4caf50;
+  background-color: #ef4e2a;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -92,7 +92,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #ef4e2a;
 }
 
 .map-container,
@@ -107,7 +107,7 @@ input[type="submit"]:hover {
 
 /*Footer*/
 .footer-content {
-  background-color: #054a1e;
+  background-color: #e5a474;
 }
 .footer-nav ul {
   margin: 0;
@@ -119,6 +119,7 @@ input[type="submit"]:hover {
 .footer-nav a {
   color: #fff;
   text-decoration: none;
+  color: black;
   font-weight: bold;
   font-size: 14px;
 }
