@@ -25,6 +25,10 @@ body {
   background-color: #e5a474;
 }
 
+input {
+    margin-top: 20px;
+}
+
 #anuncios-home {
   display: flex;
 }

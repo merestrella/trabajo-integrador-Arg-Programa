@@ -27,14 +27,8 @@
         <img src="Logo1.png" width="300px" alt="Logo">
       </div>
       <div class="col-md-6">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
-          <path fill="white"
-            d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3l-1.4 1.4ZM9.5 14q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z" />
-        </svg>
-        <input type="text" placeholder="Busqueda de catálogo">
+        <input type="text" placeholder="Búsqueda en catálogo">
       </div>
-    </div>
-
     <nav style="background:#e5a474">
       <ul class="d-flex gap-5 justify-content-center bd-highlight">
         <li class="text-black">
@@ -51,10 +45,11 @@
         </li>
       </ul>
     </nav>
+    </div>
   </header>
 
   <!--Carousel-->
-  <section class="container">
+  <section id="carousel" class="container">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -290,11 +285,10 @@
             <h2>Cotización</h2>
             <br> 
             Tipo de producto: 
-            <input type="text" id="nombre" placeholder="Mobiliario, adorno..">
-            <br>
-            <br>      
+            <input type="text" id="nombre" placeholder="Mobiliario, artículos de decoración, iluminación, etc...">
+            <br>  
             <label for="material">Seleccione el material:</label>
-            <select id="cajas" name="material">
+            <select id="material" name="material">
                 <option value="oro">Oro</option>
                 <option value="plata">Plata</option>
                 <option value="bronce">Bronce</option>
@@ -314,7 +308,9 @@
        <option value="chico">Chico</option>
        <option value="otro">Otro</option>
        </select>
-        <p> Elige una moneda: </p>
+       <br>
+       <br>
+        <label> Elige una moneda: </label>
         <p><input type="radio" name="taman" value="pesos"/> Pesos </p>
         <p><input type="radio" name="taman" value="dolar"/> Dólar </p>
         <p><input type="radio" name="taman" value="euro"/> Euro </p>      
@@ -322,13 +318,11 @@
         <input type="file" id="upload"hidden/>
         <label for="upload">Adjuntar Imagen</label>
         <br>
-        <br>
          <label for="coments">Describa el artículo en detalle : </label> 
-         <br>
-         <input type="text" id="coments" style="width: 400px; height: 100px;" placeholder="Colores, marcas , etc..">
+         <input type="text" id="coments" style="height: 100px;" placeholder="Colores, marcas , etc..">
           <br>
           <button onclick="concatenar()">Enviar</button>
-          <input type="text" id="output" style="width: 800px;">                        
+          <input type="text" id="output">                        
              <br>
         </form>
         </div>
@@ -368,7 +362,7 @@
         <div class="footer-content">
           <div class="footer-nav">
             <ul>
-              <li class="m-3"><a href="#quienes somos">Quiénes somos</a></li>
+              <li class="m-3"><a href="#quienes-somos">Quiénes somos</a></li>
               <li class="m-3"><a href="#productos">Catálogo</a></li>
               <li class="m-3"><a href="#cotizacion">Cotización</a></li>
               <li class="m-3"><a href="#contacto">Contacto</a></li>
