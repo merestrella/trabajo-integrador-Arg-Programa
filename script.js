@@ -44,13 +44,14 @@ function MostrarAnuncios(anuncio) {
     let anuncios = anuncio.results[i];
     divAnuncios.innerHTML += `
     <div class="container-anuncio">
-    <img class="img-anuncio" src="${anuncios.image_url}" />
+    <a href="${anuncios.link}"><img class="img-anuncio" src="${anuncios.image_url}" />
     <h2 class="titulo-anuncio">${anuncios.title}</h2>
+    </a>
     </div>
 
     <style>
     .titulo-anuncio {
-      font-size:15px;
+      font-size:14px;
     }
     .img-anuncio {
       max-height: 200px;
