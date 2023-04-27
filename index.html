@@ -280,54 +280,55 @@
 
     <!--Mapa y ubicación-->
     <section id="cotizacion" class="cantainer py-4">
-        <div class="row">
-            <form id="form" class="col-md-6 col-sm-12">
-            <h2>Cotización</h2>
-            <br> 
-            Tipo de producto: 
-            <input type="text" id="nombre" placeholder="Mobiliario, artículos de decoración, iluminación, etc...">
-            <br>  
-            <label for="material">Seleccione el material:</label>
-            <select id="material" name="material">
-                <option value="oro">Oro</option>
-                <option value="plata">Plata</option>
-                <option value="bronce">Bronce</option>
-                <option value="estano">Estaño</option>
-                <option value="madera">Madera</option>
-                <option value="metal">Metal</option>
-                <option value="acero">Acero</option>
-                <option value="hierro">Hierro</option>
-                <option value="otro">Otro</option>
+    <div class="row">
+      <form id="formCotizacion" class="col-md-6 col-sm-12">
+        <h2>Cotización</h2>
+        <br>
+        <label for="producto">Tipo de producto:</label>
+        <input type="text" id="producto" name="producto"
+          placeholder="Mobiliario, artículos de decoración, iluminación, etc...">
+        <br>
+        <label for="material">Seleccione el material:</label>
+        <select id="material" name="material">
+          <option value="oro">Oro</option>
+          <option value="plata">Plata</option>
+          <option value="bronce">Bronce</option>
+          <option value="estano">Estaño</option>
+          <option value="madera">Madera</option>
+          <option value="metal">Metal</option>
+          <option value="acero">Acero</option>
+          <option value="hierro">Hierro</option>
+          <option value="otro">Otro</option>
         </select>
-      <br>
-      <br>
-       <label for="material">Seleccione medida:</label>
-       <select id="tamano" name="tamano">
-       <option value="grande">Grande</option>
-       <option value="mediano">Mediano</option>
-       <option value="chico">Chico</option>
-       <option value="otro">Otro</option>
-       </select>
-       <br>
-       <br>
-        <label> Elige una moneda: </label>
-        <p><input type="radio" name="taman" value="pesos"/> Pesos </p>
-        <p><input type="radio" name="taman" value="dolar"/> Dólar </p>
-        <p><input type="radio" name="taman" value="euro"/> Euro </p>      
         <br>
-        <input type="file" id="upload"hidden/>
-        <label for="upload">Adjuntar Imagen</label>
         <br>
-         <label for="coments">Describa el artículo en detalle : </label> 
-         <input type="text" id="coments" style="height: 100px;" placeholder="Colores, marcas , etc..">
-          <br>
-          <button onclick="concatenar()">Enviar</button>
-          <input type="text" id="output">                        
-             <br>
-        </form>
+        <label for="material">Seleccione medida:</label>
+        <select id="tamano" name="tamano">
+          <option value="grande">Grande</option>
+          <option value="mediano">Mediano</option>
+          <option value="chico">Chico</option>
+          <option value="otro">Otro</option>
+        </select>
+        <div class="form-check">
+          <label> Elige una moneda: </label>
+          <p><input type="radio" name="taman" value="pesos" /> Pesos </p>
+          <p><input type="radio" name="taman" value="dolar" /> Dólar </p>
+          <p><input type="radio" name="taman" value="euro" /> Euro </p>
         </div>
-    </section>
-
+        <div class="mb-3">
+          <input type="file" class="form-control" aria-label="file example" required>
+          <div class="invalid-feedback">Example invalid form file feedback</div>
+        </div>
+        <br>
+        <label for="coments">Describa el artículo en detalle : </label>
+        <input type="text" id="coments" style="height: 100px;" placeholder="Colores, marcas , etc..">
+        <br>
+        <button type="submit" value="submit">Enviar</button>
+        <br>
+      </form>
+      </div>
+  </section>
+  
     <section id="contacto" class="container py-4">
       <div class="row">
         <form id="form" class="col-md-6 col-sm-12">

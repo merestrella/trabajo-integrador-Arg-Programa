@@ -31,6 +31,24 @@ form.addEventListener("submit", (event) => {
   }
 });
 
+const formCotizacion = document.getElementById("formCotizacion");
+const producto = document.getElementById("producto");
+const messageCoti = document.getElementById("coments");
+
+formCotizacion.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (producto.value.trim() === "") {
+    alert("Por favor ingrese un producto");
+    producto.focus();
+  } else if (messageCoti.value.trim() === "") {
+    alert("Por favor ingrese su mensaje");
+    messageCoti.focus();
+  } else {
+    alert("¡Su mensaje ha sido enviado exitosamente!");
+    form.reset();
+  }
+});
+
 const getAnuncios = () => {
   const urlFetch =
     "https://newsdata.io/api/1/news?country=ar&category=sports&apikey=pub_211489d9754ecffe6dce37882f0fd0655dd51";
