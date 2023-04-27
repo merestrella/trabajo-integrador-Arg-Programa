@@ -31,34 +31,46 @@ form.addEventListener("submit", (event) => {
   }
 });
 
-function CargarAnuncios() {
-  $.ajax(
-    "https://newsdata.io/api/1/news?country=ar&category=sports&apikey=pub_211489d9754ecffe6dce37882f0fd0655dd51"
-  ).done(MostrarAnuncios);
-}
-
-function MostrarAnuncios(anuncio) {
-  let divAnuncios = document.getElementById("anuncios-home");
-
-  for (let i = 0; i < 3; i++) {
-    let anuncios = anuncio.results[i];
-    divAnuncios.innerHTML += `
-    <div class="container-anuncio">
-    <a href="${anuncios.link}"><img class="img-anuncio" src="${anuncios.image_url}" />
-    <h2 class="titulo-anuncio">${anuncios.title}</h2>
-    </a>
-    </div>
-
-    <style>
-    .titulo-anuncio {
-      font-size:14px;
-    }
-    .img-anuncio {
-      max-height: 200px;
-      width: auto;
-    }
-    </style>`;
-  }
-}
-
-CargarAnuncios();
+const getAnuncios = () => {
+  const urlFetch =
+    "https://newsdata.io/api/1/news?country=ar&category=sports&apikey=pub_211489d9754ecffe6dce37882f0fd0655dd51";
+  const refDivNotas = document.querySelector("#anuncios-home");
+  fetch(urlFetch)
+    .then((response) => response.json())
+    .then((results) => {
+      const listaNotas = results?.results
+        .slice(0, 3)
+        .map(({ title, link, image_url }) => {
+          const imagen = image_url
+            ? `<img src=${image_url} width="200" height="200 />`
+            : `<img class="img-anuncio" src="https://depor.com/resizer/MXvzOc-IrH6P7_QBWSEUUvRKnwQ=/1200x675/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/ASYXSWROVNE5NG4PSR4TF4ZF2A.gif" />`;
+          return `
+          <div class="container-anuncio">
+            <a href="${link}">
+              <picture class="container-img">
+                ${imagen}
+              </picture>
+              <h2 class="titulo-anuncio">${title}</h2>
+            </a>
+          </div>
+      
+          <style>
+            .titulo-anuncio {
+              font-size:14px;
+            }
+            .img-anuncio {
+              max-height: 200px;
+              width: auto;
+            }
+            container-img {
+              max-width: 200px;
+            }
+          </style>`;
+        });
+      refDivNotas.innerHTML = listaNotas.join();
+    });
+};
+//Para ejecutar la funcion cuando la pagina se recarga por primera vez
+window.onload = function () {
+  getAnuncios();
+};
